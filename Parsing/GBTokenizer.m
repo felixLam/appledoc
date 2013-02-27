@@ -301,8 +301,8 @@
 	if (!self.settings.preprocessHeaderDoc) return line;
 	
 	// Remove the entire line when it contains @method or property or class.
-	//line = [line stringByReplacingOccurrencesOfRegex:@"(?m:@(protocol|method|property|class).*$)" withString:@""];
-	
+    line = [line stringByReplacingOccurrencesOfRegex:@"(?m:@(protocol|method|property|class).*$)" withString:@""];
+
 	// Remove unsupported headerDoc words.
 	//line = [line stringByReplacingOccurrencesOfRegex:@"(?m:^\\s*@(discussion|abstract))\\s?" withString:@"\n"];
 	
